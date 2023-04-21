@@ -1,34 +1,56 @@
-# techtronix-app
-Esta App se encarga mostrar los diferentes productos que se ofrecen en la tienda online Techtonix.
+# Techtronix Store App
 
-## Instalación
-***
-installation.
+_Esta App se encarga mostrar los diferentes productos tecnológicos que se ofrecen en la tienda online Techtronix, y de esta ofrecer a los clientes la mejor experiencia a la hora de realizar sus compras._
+
+---
+## Empecemos 🚀
+
+_Se deben ejecutar los siguientes comandos para obtener una copia local del proyecto, para desarrollo y pruebas._
+
+### Instalación 🔧
+
+_Inicialmente se debe clonar el proyecto e ingresar al mismo usando los comandos:_
 ```
-$ git clone https://github.com/jpaomat/techtronix-app.git
-$ cd techtronix-app
+git clone https://github.com/jpaomat/techtronix-app.git
+cd techtronix-app
 ```
-Adicional debe ejecutar el comando `npm install` para instalar todas las dependencias necesarias para ejecutar el proyecto localmente.
-## Scripts Disponibles
+_Adicional debe ejecutar el comando `npm install` para instalar todas las dependencias necesarias para ejecutar el proyecto localmente._
+```
+npm install
+```
 
-En el directorio del proyecto, puede ejecutar:
+### Scripts Disponibles ⌨️
 
-### `npm start` ⚙️
+_En el directorio del proyecto, puede ejecutar los siguientes comandos para correr el proyecto localmente, las pruebas unitarias y el linter:_
 
-Ejecutar el App en modo desarrollo.<br />
-Abre la App en el navegador [http://localhost:3000](http://localhost:3000).
+#### Ejecutar el App en modo desarrollo ⚙️
 
-### `npm test` ⚙️
+```
+npm start
+```
+_Este comando por default ejecuta la App en el navegador en el puerto 3000 [http://localhost:3000](http://localhost:3000)._
 
-Para la ejecución de las pruebas unitarias use el comando `npm test` este le mostrara la covertura de las pruebas y genera una carpeta coverage en la raiz del proyecto.
+#### Ejecutar test unitarios ⚙️
+_Para garantizar que cada vez que se haga un nuevo cambio en el proyecto y se quiera agregar el `commit` correspondiente, se implementó `husky` con el hook pre-commit que se encarga de ejecutar automaticamente los tests antes de crear el commit, y en caso de presentarse algún error en las pruebas no permite crear commit. Para ejecutar los tests unitarios manualmente use el comando:_
+```
+npm run test
+```
 
-## `npm run lint` ⚙️
+#### Ejecutar Linter ⚙️
 
-Para la ejecución del linter para el análisis de la calidad del código use `npm run lint` este le mostrara si hay algún por en la sintaxis del código.
+_Para analizar la calidad del código y ver si existe un problema de sintaxis ejecute:_
+```
+npm run lint
+```
+_Este comando tambien se ejecuta automaticamente en el hook `pre-commit` de `husky`._
 
-### `npm run build` ⚙️
+### Despliegue 📦
 
-Crea la aplicación para producción en la carpeta `build`.<br />
-Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento.
+#### Creación del build de producción ⚙️
+_Se crea el hook `pre-push` de `husky` para validar que se crear correctamente el `build` del proyecto antes de subir los cambios al repositorio y que de esta manera no se presenten problemas a la hora del despliegue_
 
-## Despliegue 📦
+```
+npm run build
+```
+_Crea la aplicación para producción en la carpeta `build`.<br />_
+_Empaqueta correctamente React en modo de producción y optimiza la compilación para obtener el mejor rendimiento._
