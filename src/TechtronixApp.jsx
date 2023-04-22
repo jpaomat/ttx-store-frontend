@@ -5,6 +5,7 @@ export const TechtronixApp = () => {
 
 	return (
 		<>
+			<h2>Solo espero que funcione, ssiiiii</h2>
 			<AppRouter />
 		</>
 	);

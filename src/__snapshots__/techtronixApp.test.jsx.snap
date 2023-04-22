@@ -2,6 +2,9 @@
 
 exports[`Techtronix component should render component 1`] = `
 <React.Fragment>
+  <h2>
+    Solo espero que funcione, ssiiiii
+  </h2>
   <AppRouter />
 </React.Fragment>
 `;
