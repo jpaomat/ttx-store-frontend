@@ -1,0 +1,17 @@
+.products-container {
+    margin: 8px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+@media screen and (min-width: 35em) {
+    .products-container {
+        margin: 72px;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .products-container {
+        margin: 80px;
+    }
+}

@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Techtronix component should render component 1`] = `
-<React.Fragment>
-  <AppRouter />
-</React.Fragment>
+<div
+  className="main"
+>
+  <Header />
+  <div
+    className="main-container"
+  >
+    <AppRouter />
+  </div>
+</div>
 `;

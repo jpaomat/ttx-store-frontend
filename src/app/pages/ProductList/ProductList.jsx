@@ -1,5 +1,10 @@
+import { CardList } from '../../components/CardList/CardList';
+import './ProductList.scss';
+
 export const ProductList = () => {
     return (
-        <h1>Hola productos</h1>
+        <div className='products-container'>
+            <CardList />
+        </div>
     );
 };

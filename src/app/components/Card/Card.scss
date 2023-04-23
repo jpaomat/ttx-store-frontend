@@ -1,0 +1,80 @@
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 16px;
+	border: 1px solid #dfdada;
+    min-height: 480px;
+    &:hover {
+        border: 2px solid #7028FC;
+        .card-button {
+            display: block;
+        }
+    }
+	&-image {
+		margin: 0 auto;
+        max-width: 200px;
+		border-radius: 10px;
+	}
+	&-content {
+		padding: 10px;
+		.item {
+            &__brand-wrapper {
+                font-size: 14px;
+                font-family: Lato,sans-serif;
+            }
+			&-description__wrapper {
+				font-size: 14px;
+				color: #414040;
+			}
+            &-price {
+                font-size: 2rem;
+                font-weight: 600;
+                font-family: Lato,sans-serif;
+                color: #777;
+                margin: 8px 0;
+            }
+			&-price-wrapper {
+				display: grid;
+				grid-template-columns: auto 30px;
+				.item-price {
+					font-size: 24px;
+				}
+				.item-discount {
+					font-size: 16px;
+					color: rgb(24, 181, 24);
+				}
+			}
+		}
+	}
+	&-footer {
+		&-content {
+			display: flex;			
+            .card-button {
+                padding: 10px 20px;
+                margin: 5px auto;
+                border-radius: 10px;
+                color: white;
+                background-color: #7028FC;
+            }
+		}
+	}
+}
+
+@media screen and (min-width: 35em) {
+	.card {
+		min-height: 320px;
+        font-size: 12px;
+	}
+}
+
+@media screen and (min-width: 65em) {
+	.card {
+		min-height: 430px;
+	}
+    .card-button {
+        display: none;
+    }
+}
