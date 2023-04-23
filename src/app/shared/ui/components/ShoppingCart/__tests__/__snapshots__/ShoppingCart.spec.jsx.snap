@@ -2,6 +2,14 @@
 
 exports[`Techtronix component should render component 1`] = `
 <React.Fragment>
-  <AppRouter />
+  <BsCart4
+    color="rgb(47, 79, 79)"
+    size={30}
+  />
+  <span
+    className="shopping-cart__counter"
+  >
+    5
+  </span>
 </React.Fragment>
 `;

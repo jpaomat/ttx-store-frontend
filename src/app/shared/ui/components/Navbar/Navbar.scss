@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    position: relative;
+    flex-flow: row nowrap;
+    margin: auto;
+    width: 100%;
+    height: 75px;
+    background: rgb(123,222,218);
+    background: linear-gradient(90deg, rgba(123,222,218,1) 0%, rgba(255,255,255,1) 99%);
+    border-bottom: 1px solid rgb(47, 79, 79);
+
+    &-brand {
+      border-top-right-radius: 50px;
+      border-right: 3px solid white;
+      background-color: rgb(47, 79, 79);
+      text-decoration: none;
+      &__logo {
+        color: transparent;
+      }
+    }
+    &-collapse {
+        width: 90%;
+    }
+    &-nav-actions {
+        list-style: none;
+        float: right;
+        margin-right: 24px;
+    }
+}

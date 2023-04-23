@@ -1,0 +1,25 @@
+.shopping-cart__counter {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 100%;
+    top: 7px;
+    right: 10px;
+    background: rgb(47, 79, 79);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-family: Lato,sans-serif;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: 12px;
+    padding-right: 1px;
+}
+
+@media (min-width: 1024px) {
+    .shopping-cart__counter {
+        // top: -3px;
+        // right: 5%;
+    }
+}
