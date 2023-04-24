@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Techtronix component should render component 1`] = `
+<nav
+  className="navbar"
+>
+  <Link
+    className="navbar-brand"
+    to="/"
+  >
+    <div
+      className="navbar-brand__logo"
+    >
+      <LogoTtx />
+    </div>
+  </Link>
+  <div
+    className="navbar-collapse"
+  >
+    <ul
+      className="navbar-nav-actions"
+    >
+      <li
+        className="navbar-nav-actions__cart"
+      >
+        <div
+          className="navbar-nav-actions__cart-content"
+        >
+          <a
+            className="navbar-nav-actions__shopingCart"
+          >
+            <ShoppingCart
+              items={20}
+            />
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+`;

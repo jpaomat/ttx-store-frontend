@@ -2,13 +2,6 @@
 
 exports[`Techtronix component should render component 1`] = `
 <div
-  className="main"
->
-  <Header />
-  <div
-    className="main-container"
-  >
-    <AppRouter />
-  </div>
-</div>
+  className="card-container"
+/>
 `;

@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    position: relative;
+    flex-flow: row nowrap;
+    margin: auto;
+    width: 100%;
+    height: 75px;
+    background: white;
+    // background: linear-gradient(90deg, #7028FC 0%, rgb(255, 255, 255) 99%);
+    border-bottom: 3px solid #6f28fc;
+
+    &-brand {
+      border-top-right-radius: 50px;
+      border-right: 3px solid white;
+      background-color: #7028FC;
+      text-decoration: none;
+      &__logo {
+        color: transparent;
+      }
+    }
+    &-collapse {
+        width: 90%;
+    }
+    &-nav-actions {
+        list-style: none;
+        float: right;
+        margin: 22px;
+    }
+}

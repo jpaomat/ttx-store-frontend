@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Techtronix component should render component 1`] = `
+<div
+  className="card"
+>
+  <img
+    className="card-image"
+  />
+  <div
+    className="card-content"
+  >
+    <div
+      className="item-description__wrapper"
+    >
+      <p
+        className="item-brand"
+      />
+      <p
+        className="item-model"
+      />
+    </div>
+    <p
+      className="item-no-stock"
+    >
+      No disponible
+    </p>
+  </div>
+  <div
+    className="card-footer"
+  >
+    <div
+      className="card-footer-content"
+    >
+      <button
+        className="card-button"
+        disabled={true}
+      >
+        No disponible
+      </button>
+    </div>
+  </div>
+</div>
+`;
