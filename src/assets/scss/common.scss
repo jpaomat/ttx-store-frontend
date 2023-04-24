@@ -4,14 +4,20 @@
 	background-color: white;
 }
 
+.item__no-stock {
+	color: $red-300;
+	margin: 10px 0;
+}
+
 @media screen and (min-width: $break-tablet) {
 	.section-container {
 		margin: 0 32px;
 	}
 }
 
-@media screen and (min-width: $break-tablet) {
+@media screen and (min-width: $break-desktop) {
 	.section-container {
-		margin: 0 48px;
+		margin: 0 60px;
 	}
 }
+

@@ -61,5 +61,10 @@
                 }
             }
         }
+
+        &:disabled {
+            background-color: $gray-220;
+            cursor: none;
+        }
     }  
 }

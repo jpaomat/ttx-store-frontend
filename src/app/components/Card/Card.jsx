@@ -11,7 +11,7 @@ export const Card = ({ brand, imgUrl, model, price }) => {
 				<p className='card__content--model'>{model}</p>
 				{price ?
 					<p className='card__content--price'>{price} €</p> :
-					<p className='card__content--no-stock'>No disponible</p>
+					<p className='item__no-stock '>No disponible</p>
 				}
 			</div>
 			<Button size='sm' disabledBtn={!price}>

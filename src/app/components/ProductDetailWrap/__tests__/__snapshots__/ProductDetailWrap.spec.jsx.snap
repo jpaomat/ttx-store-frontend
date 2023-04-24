@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Product detail wrap component Renderer componen 1`] = `
-<React.Fragment>
-  <h2>
-    Hola detaless card
-  </h2>
-</React.Fragment>
-`;
