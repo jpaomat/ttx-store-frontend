@@ -6,6 +6,7 @@ exports[`Techtronix component should render component 1`] = `
 >
   <img
     className="card-image"
+    src="http:image-hp-test.com"
   />
   <div
     className="card-content"
@@ -15,15 +16,20 @@ exports[`Techtronix component should render component 1`] = `
     >
       <p
         className="item-brand"
-      />
+      >
+        Hp
+      </p>
       <p
         className="item-model"
-      />
+      >
+        test model
+      </p>
     </div>
     <p
-      className="item-no-stock"
+      className="item-price"
     >
-      No disponible
+      110
+       €
     </p>
   </div>
   <div
@@ -34,9 +40,9 @@ exports[`Techtronix component should render component 1`] = `
     >
       <button
         className="card-button"
-        disabled={true}
+        disabled={false}
       >
-        No disponible
+        Agregar al carro
       </button>
     </div>
   </div>
