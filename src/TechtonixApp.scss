@@ -1,5 +1,9 @@
+@import './assets/scss';
 .main {
     &-container {
-        margin: 16px;
+        margin: 0  16px;
+    }
+    @media screen and (min-width: $break-tablet) {
+        background-color: #EDEDED;
     }
 }

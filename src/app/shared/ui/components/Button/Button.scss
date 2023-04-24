@@ -1,0 +1,65 @@
+@import '../../../../../assets/scss';
+.btn {
+    &-container {
+        display: flex;
+    }
+
+    &-ttx {
+        background-color: $purple-500;
+        border-radius: 20px;
+        color: $white;
+        cursor: pointer;
+        justify-content: center;
+        outline: none;
+        margin: auto;
+
+        &__lg {
+            height: 48px;
+            font-size: 16px;
+            padding-left: 32px;
+            padding-right: 32px;
+            padding-top: 14px;
+            padding-bottom: 16px;
+            & > span:empty {
+                font-size: 24px;
+                padding-right: 8px;
+                text-decoration: none !important;
+            }
+            & > span:not(:empty) {
+                padding-left: 3px;
+                padding-bottom: 1px;
+            }
+            &:hover span:not(:empty) {
+                @media (min-width: $break-desktop) {
+                    transform: translateX(2px);
+                    transition: all 0.2s ease-in-out;
+                    display: inline-block;
+                }
+            }
+        }
+    
+        &__sm {
+            height: 36px;
+            font-size: 14px;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            & > span:empty {
+                font-size: 20px;
+                padding-right: 4px;
+            }
+            & > span:not(:empty) {
+                padding-left: 3px;
+                padding-top: 0px;
+            }
+            &:hover span:not(:empty) {
+                @media (min-width: $break-desktop) {
+                    transform: translateX(2px);
+                    transition: all 0.2s ease-in-out;
+                    display: inline-block;
+                }
+            }
+        }
+    }  
+}
