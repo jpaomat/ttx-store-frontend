@@ -6,7 +6,6 @@ exports[`Techtronix component should render component 1`] = `
 >
   <img
     className="card-image"
-    src="https://itx-frontend-test.onrender.com/images/ZmGrkLRPXOTpxsU4jjAcv.jpg"
   />
   <div
     className="card-content"
@@ -15,20 +14,16 @@ exports[`Techtronix component should render component 1`] = `
       className="item-description__wrapper"
     >
       <p
-        className="item-description"
-      >
-        Acer
-      </p>
+        className="item-brand"
+      />
       <p
-        className="item-description"
-      >
-        Iconia Talk S
-      </p>
+        className="item-model"
+      />
     </div>
     <p
-      className="item-price"
+      className="item-no-stock"
     >
-      150 €
+      No disponible
     </p>
   </div>
   <div
@@ -39,8 +34,9 @@ exports[`Techtronix component should render component 1`] = `
     >
       <button
         className="card-button"
+        disabled={true}
       >
-        Agregar al carro
+        No disponible
       </button>
     </div>
   </div>

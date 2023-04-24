@@ -3,16 +3,5 @@
 exports[`Techtronix component should render component 1`] = `
 <div
   className="card-container"
->
-  <Card />
-  <Card />
-  <Card />
-  <Card />
-  <Card />
-  <Card />
-  <Card />
-  <Card />
-  <Card />
-  <Card />
-</div>
+/>
 `;

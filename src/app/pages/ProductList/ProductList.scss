@@ -10,7 +10,13 @@
     }
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 45em) {
+    .products-container {
+        margin: 80px 40px;
+    }
+}
+
+@media screen and (min-width: 70em) {
     .products-container {
         margin: 80px;
     }
