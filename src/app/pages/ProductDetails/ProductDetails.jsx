@@ -1,8 +1,10 @@
+import { ProductDetailCard } from '../../components/ProductDetailCard/ProductDetailCard';
+import './ProductDetails.scss';
+
 export const ProductDetails = () => {
-	const hola = 'hola';
 	return (
-		<>
-		<h1>Hola producto detalle</h1>
-		<h1>{hola}</h1></>
+		<div className='section-container'>
+			<ProductDetailCard />
+		</div>
 	);
 };

@@ -1,0 +1,38 @@
+@import '../../../../../assets/scss/';
+
+.select-actions {
+	margin: 4px;
+	&__label {
+		margin: 6px;
+	}
+	&__select {
+		border-radius: 8px;
+		border: 1px solid $purple-500;
+	}
+
+	.singleSelect {
+		padding: 4px 10px;
+	}
+
+	.chip {
+		margin: 0;
+		padding: 0;
+	}
+
+	.multiSelectContainer {
+		ul {
+			max-height: 120px;
+		}
+		.optionContainer {
+			li:hover,
+			.highlight {
+				background: $purple-100;
+				color: $black;
+			}
+			li {
+				padding: 8px;
+				border-bottom: 1px solid $gray-150;
+			}
+		}
+	}
+}

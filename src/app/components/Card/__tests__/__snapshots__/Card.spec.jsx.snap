@@ -5,40 +5,43 @@ exports[`Techtronix component should render component 1`] = `
   className="card"
 >
   <img
-    className="card-image"
+    className="card__image"
+    src="http:image-hp-test.com"
   />
   <div
-    className="card-content"
+    className="card__content"
   >
-    <div
-      className="item-description__wrapper"
-    >
-      <p
-        className="item-brand"
-      />
-      <p
-        className="item-model"
-      />
-    </div>
     <p
-      className="item-no-stock"
+      className="card__content--brand"
     >
-      No disponible
+      Hp
+    </p>
+    <p
+      className="card__content--model"
+    >
+      test model
+    </p>
+    <p
+      className="card__content--price"
+    >
+      110
+       €
     </p>
   </div>
-  <div
-    className="card-footer"
+  <Button
+    disabledBtn={false}
+    onClick={[Function]}
+    size="sm"
   >
-    <div
-      className="card-footer-content"
-    >
-      <button
-        className="card-button"
-        disabled={true}
-      >
-        No disponible
-      </button>
-    </div>
-  </div>
+    <React.Fragment>
+      <span>
+        Agregar al carrito
+      </span>
+      <BsCart4
+        className="cart-icon"
+        size={14}
+      />
+    </React.Fragment>
+  </Button>
 </div>
 `;

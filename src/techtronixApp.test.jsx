@@ -1,5 +1,5 @@
+import Renderer from 'react-test-renderer/shallow';
 import { TechtronixApp } from './TechtronixApp';
-const Renderer = require('react-test-renderer/shallow');
 
 const renderer = new Renderer();
 

@@ -3,8 +3,11 @@ import './ProductList.scss';
 
 export const ProductList = () => {
     return (
-        <div className='products-container'>
-            <CardList />
-        </div>
+        <>
+            <h3>Agregar search</h3>
+            <div className='section-container'>
+                <CardList />
+            </div>
+        </>
     );
 };

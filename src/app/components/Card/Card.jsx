@@ -1,27 +1,34 @@
 import PropTypes from 'prop-types';
+import { Button } from '../../shared/ui/components/Button/Button';
+import { BsCart4 } from 'react-icons/bs';
 import './Card.scss';
 
 export const Card = ({ brand, imgUrl, model, price }) => {
+	const onClick = () => {
+		console.log('click desde button');
+	};
 	return (
 		<div className='card'>
-			<img className='card-image' src={imgUrl}></img>
-			<div className='card-content'>
-				<div className='item-description__wrapper'>
-					<p className='item-brand'>{brand}</p>
-					<p className='item-model'>{model}</p>
-				</div>
-				{price ?
-					<p className='item-price'>{price} €</p> :
-					<p className='item-no-stock'>No disponible</p>
-				}
+			<img className='card__image' src={imgUrl}></img>
+			<div className='card__content'>
+				<p className='card__content--brand'>{brand}</p>
+				<p className='card__content--model'>{model}</p>
+				{price ? (
+					<p className='card__content--price'>{price} €</p>
+				) : (
+					<p className='item__no-stock '>No disponible</p>
+				)}
 			</div>
-			<div className='card-footer'>
-				<div className='card-footer-content'>
-					<button className='card-button' disabled={!price}>
-						{ price ? 'Agregar al carro' : 'No disponible'}
-					</button>
-				</div>
-			</div>
+			<Button size='sm' disabledBtn={!price} onClick={onClick}>
+				{price ? (
+					<>
+						<span>Agregar al carrito</span>
+						<BsCart4 className='cart-icon' size={14} />
+					</>
+				) : (
+					<span>No disponible</span>
+				)}
+			</Button>
 		</div>
 	);
 };
@@ -29,6 +36,7 @@ export const Card = ({ brand, imgUrl, model, price }) => {
 Card.defaultProps = {};
 
 Card.propTypes = {
+	productId: PropTypes.string,
 	brand: PropTypes.string.isRequired,
 	imgUrl: PropTypes.string.isRequired,
 	model: PropTypes.string.isRequired,
