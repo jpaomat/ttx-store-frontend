@@ -1,6 +1,9 @@
 @import '../../../assets/scss/';
 .card-container {
 	@include organizedColumn(space-between);
+	a {
+		text-decoration: auto;
+	}
 }
 
 // Table

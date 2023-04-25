@@ -30,11 +30,18 @@ exports[`Techtronix component should render component 1`] = `
   </div>
   <Button
     disabledBtn={false}
+    onClick={[Function]}
     size="sm"
   >
-    <span>
-      Agregar al carro
-    </span>
+    <React.Fragment>
+      <span>
+        Agregar al carrito
+      </span>
+      <BsCart4
+        className="cart-icon"
+        size={14}
+      />
+    </React.Fragment>
   </Button>
 </div>
 `;

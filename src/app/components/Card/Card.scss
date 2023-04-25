@@ -1,6 +1,6 @@
 @import '../../../assets/scss';
 .card {
-    @include organizedColumn(space-between);
+	@include organizedColumn(space-between);
 	padding: 10px;
 	border-radius: 10px;
 	margin: 16px;
@@ -28,6 +28,18 @@
 			font-size: 2rem;
 			color: $gray-220;
 			margin: 8px 0;
+		}
+	}
+}
+
+.btn-ttx__sm {
+	height: 38px;
+	.cart-icon {
+		margin: 2px 0 0 2px;
+	}
+	&:hover {
+		.cart-icon {
+			padding-left: 2px;
 		}
 	}
 }
