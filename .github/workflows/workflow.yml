@@ -10,8 +10,8 @@ env:
   language: 'javascript'
   region: 'us-east-1'
   build_folder: build
-  bucket_name: techtronixstore.com
-  cloudfront_id: E3J5SZYIFO4ALE
+  bucket_name: techtronix-store.com
+  cloudfront_id: 123A
 
 jobs:
   install-dev-dependencies:
@@ -102,7 +102,7 @@ jobs:
         run: npm run build
       - name: Copy files to the production website with the AWS CLI
         run: |
-          aws s3 sync --delete ${{ env.build_folder }} s3://${{ env.bucket_name}}
+          aws s3 sync --delete ${{ env.build_folder }} s3://${{ secrets.BUCKET_NAME}}
           
       # - name: Invalidate cache cloudfront
       #   run: |

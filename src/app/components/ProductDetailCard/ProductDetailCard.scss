@@ -48,16 +48,6 @@
 			margin: 10px 0 24px 0;
 		}
 	}
-	.select-actions {
-		margin-top: 12px;
-		&__label {
-			margin: 4px;
-		}
-		&__select {
-			border: 1px solid #7028fc;
-			color: #7028fc;
-		}
-	}
 }
 
 @media screen and (min-width: $break-desktop) {
@@ -96,41 +86,8 @@
 			&--actions {
 				@include organizedMultipleColumns(50% 50%);
 				margin: 20px 36px;
-				.select-actions {
-					margin: 4px;
-					&__label {
-						margin: 4px;
-					}
-				}
 			}
 		}
 	}
 }
 
-
-.singleSelect {
-    padding: 4px 10px;
-}
-
-.chip {
-	margin: 0;
-	padding: 0;
-}
-
-.searchWrapper {
-    border: 1px solid $purple-500;
-}
-
-.optionContainer {
-	li:hover, .highlight {
-		background: $gray-150;;
-		color: #fff;
-	}
-	li {
-		padding: 8px;
-	}
-} 
-
-.multiSelectContainer ul {
-    max-height: 120px;
-}
