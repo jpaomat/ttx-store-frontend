@@ -1,0 +1,95 @@
+@import '../../../../../assets/scss/';
+
+.detail-card {
+	background-color: $white;
+	&__item {
+		margin: 24px;
+		&--image {
+			display: flex;
+			border: 1px solid $purple-100;
+			img {
+				width: 100%;
+				min-width: 100px;
+				max-width: 280px;
+				margin: auto;
+			}
+		}
+	}
+}
+
+.item-information {
+	&__header {
+		font-size: 14px;
+
+		&--title {
+			font-size: 20px;
+		}
+		.item-price {
+			color: $orange-500;
+			font-size: 32px;
+		}
+		&--price {
+			font-weight: 600;
+			line-height: 64px;
+		}
+	}
+
+	&__body {
+		line-height: 24px;
+		&--title {
+			font-weight: bold;
+		}
+		&--options {
+			padding: 10px;
+			font-size: 14px;
+		}
+	}
+
+	&__footer {
+		&--actions {
+			font-size: 12px;
+			margin: 10px 0 24px 0;
+		}
+	}
+}
+
+@media screen and (min-width: $break-desktop) {
+	.detail-card {
+		@include organizedMultipleColumns(45% 55%);
+		margin: 32px 48px;
+	}
+	.item-information {
+		padding: 24px 48px;
+		border-radius: 10px;
+
+		&__header {
+			&--title {
+				font-size: 28px;
+			}
+			&--price {
+				font-size: 48px;
+			}
+			&--currrency {
+				font-size: 32px;
+			}
+		}
+
+		&__body {
+			line-height: 18px;
+			&--title {
+				font-weight: bold;
+			}
+			&--options {
+				margin: 0 24px 12px;
+			}
+		}
+
+		&__footer {
+			&--actions {
+				@include organizedMultipleColumns(50% 50%);
+				margin: 20px 36px;
+			}
+		}
+	}
+}
+

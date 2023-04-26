@@ -1,0 +1,48 @@
+@import '../../../../../assets/scss/';
+
+.card {
+	background-color: $white;
+	@include organizedColumn(space-between);
+	padding: 10px;
+	border-radius: 10px;
+	margin: 16px;
+	border: 1px solid $purple-100;
+	&:hover {
+		border: 2px solid $purple-500;
+		box-shadow: (5px 5px) $purple-100;
+		padding: 9px;
+	}
+	&__image {
+		margin: 0 auto;
+		max-width: 200px;
+		border-radius: 10px;
+	}
+	&__content {
+		padding: 10px;
+		font-size: 14px;
+		font-weight: 600;
+		color: $gray-250;
+
+		&--model {
+			font-weight: 400;
+		}
+
+		&--price {
+			font-size: 2rem;
+			color: $gray-220;
+			margin: 8px 0;
+		}
+	}
+}
+
+.btn-ttx__sm {
+	height: 38px;
+	.cart-icon {
+		margin: 2px 0 0 2px;
+	}
+	&:hover {
+		.cart-icon {
+			padding-left: 2px;
+		}
+	}
+}

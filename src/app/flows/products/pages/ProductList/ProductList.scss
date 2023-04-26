@@ -1,0 +1,15 @@
+@import '../../../../../assets/scss';
+.section-container {
+	background-color: transparent;
+}
+.search-container {
+    padding: 12px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: $break-tablet) {
+    .search-container {
+        justify-content: flex-end;
+    }
+}

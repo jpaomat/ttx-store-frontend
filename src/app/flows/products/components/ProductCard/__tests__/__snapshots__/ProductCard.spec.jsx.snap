@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Techtronix component should render component 1`] = `
+<div
+  className="card"
+>
+  <img
+    className="card__image"
+    src="http:image-hp-test.com"
+  />
+  <div
+    className="card__content"
+  >
+    <p
+      className="card__content--brand"
+    >
+      Hp
+    </p>
+    <p
+      className="card__content--model"
+    >
+      test model
+    </p>
+    <PriceComponent
+      price="110"
+    />
+  </div>
+  <ButtonApp
+    disabledBtn={false}
+    onClick={[Function]}
+    size="sm"
+  >
+    <ButtonContent
+      price="110"
+    />
+  </ButtonApp>
+</div>
+`;
