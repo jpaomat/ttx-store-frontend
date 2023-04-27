@@ -2,21 +2,14 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { BsCart4 } from 'react-icons/bs';
 import { ButtonApp, MultiselectContainer } from '../../../../shared/ui';
+import { dataToShowDescription, selectorsProduct, initializedProductSelected } from '../../const/detailsData.const';
 import './ProductDetailCard.scss';
 
 export const ProductDetailCard = () => {
 	const { productId } = useParams();
-	const [selectedProductOptions, setSelectedProductOptions] = useState({
-		id: productId,
-	});
-	const [productSelected, setProductSelected] = useState({
-		brand: '',
-		imgUrl: '',
-		model: '',
-		ram: '',
-		price: '',
-		options: {},
-	});
+	const [productSelected, setProductSelected] = useState({...initializedProductSelected});
+	const [selectedProductOptions, setSelectedProductOptions] = useState(null);
+	const [selectorDefaultValues, setSelectorDefaultValues] = useState(null);
 
 	useEffect(() => {
 		fetch(`https://itx-frontend-test.onrender.com/api/product/${productId}`)
@@ -25,33 +18,6 @@ export const ProductDetailCard = () => {
 			.catch(error => console.error(error));
 	}, []);
 
-	const dataToShowDescription = [
-		'brand',
-		'model',
-		'price',
-		'cpu',
-		'ram',
-		'os',
-		'displaySize',
-		'battery',
-		'dimentions',
-		'primaryCamera',
-		'secondaryCmera',
-	];
-
-	const selectorsProduct = [
-		{
-			selector: 'storages',
-			codeName: 'storageCode',
-			label: 'Almacenamiento',
-		},
-		{
-			selector: 'colors',
-			codeName: 'colorCode',
-			label: 'Colores',
-		},
-	];
-
 	const getOptions = (codeName, options) => {
 		return options.map(({ code, name }) => ({ codeName, code, name }));
 	};
@@ -59,18 +25,21 @@ export const ProductDetailCard = () => {
 	const onSelect = optionSelected => {
 		const { codeName, code } = optionSelected[0];
 		setSelectedProductOptions({
+			...selectorDefaultValues,
 			...selectedProductOptions,
 			...{ [`${codeName}`]: code },
 		});
 	};
 
 	const addItemCart = () => {
+		let dataToSend = selectedProductOptions || selectorDefaultValues;
+		dataToSend = {...dataToSend, id: productId};
 		fetch('https://itx-frontend-test.onrender.com/api/cart', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
-			body: JSON.stringify(selectedProductOptions),
+			body: JSON.stringify(dataToSend),
 		})
 			.then(response => response.json())
 			.then(json => console.log('Products in cart', json))
@@ -109,10 +78,10 @@ export const ProductDetailCard = () => {
 							Caracteristicas destacadas
 						</p>
 						<ul className='item-information__body--options'>
-							{dataToShowDescription.map(key => (
-								<li key={key}>
+							{dataToShowDescription.map(({label, property}) => (
+								<li key={property}>
 									<span>
-										<b>{key}: </b> {productSelected[key]}
+										<b>{label}: </b> {productSelected[property]}
 									</span>
 								</li>
 							))}
@@ -127,6 +96,8 @@ export const ProductDetailCard = () => {
 									selector={selector}
 									label={label}
 									displayValue='name'
+									selectedValues={getOptions(codeName, options[selector])[0]}
+									setSelectorDefaultValues={setSelectorDefaultValues}
 									options={getOptions(codeName, options[selector])}
 									onSelect={onSelect}
 								/>

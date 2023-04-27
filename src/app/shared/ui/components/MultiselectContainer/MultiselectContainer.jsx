@@ -3,9 +3,12 @@ import './MultiselectContainer.scss';
 import { useEffect } from 'react';
 import Multiselect from 'multiselect-react-dropdown';
 
-export const MultiselectContainer = ({selector, label, options, displayValue, onSelect}) => {
-
+export const MultiselectContainer = ({selector, label, options, selectedValues, displayValue, onSelect, setSelectorDefaultValues}) => {
 	useEffect(() => {
+		setSelectorDefaultValues((currentValue) => ({
+			...currentValue,
+			...{ [`${selectedValues.codeName}`]: selectedValues.code },
+		}));
 	}, []);
 
 	return (
@@ -14,7 +17,8 @@ export const MultiselectContainer = ({selector, label, options, displayValue, on
 			<Multiselect
 				className='select-actions__select'
 				options={options}
-				singleSelect
+				singleSelect= {true}
+				selectedValues={[selectedValues]}
 				displayValue={displayValue}
                 onSelect={onSelect}
 			/>
@@ -25,7 +29,12 @@ export const MultiselectContainer = ({selector, label, options, displayValue, on
 MultiselectContainer.defaultProps = {
     selector: '',
 	label: '',
-	options: []
+	options: [{}],
+	selectedValues: {
+		code: 0,
+		codeName: '',
+		name: '',
+	}
 };
 
 MultiselectContainer.propTypes = {
@@ -33,5 +42,11 @@ MultiselectContainer.propTypes = {
 	label: PropTypes.string.isRequired,
 	options: PropTypes.arrayOf(PropTypes.shape({})),
 	displayValue: PropTypes.string,
-    onSelect: PropTypes.func
+	selectedValues: PropTypes.shape({
+		code: PropTypes.number,
+		codeName: PropTypes.string,
+		name: PropTypes.string,
+	}),
+    onSelect: PropTypes.func,
+	setSelectorDefaultValues: PropTypes.func,
 };

@@ -53,13 +53,23 @@
 	}
 }
 
+@media screen and (min-width: $break-tablet) {
+	.detail-card {
+		padding: 12px;
+		.item-information {
+			&__footer {
+				padding: 0 10%;
+			}
+		}
+	}
+}
+
 @media screen and (min-width: $break-desktop) {
 	.detail-card {
 		@include organizedMultipleColumns(45% 55%);
 		margin: 32px 48px;
 	}
 	.item-information {
-		padding: 24px 48px;
 		border-radius: 10px;
 
 		&__header {
@@ -85,9 +95,9 @@
 		}
 
 		&__footer {
+			padding: 0 5%;
 			&--actions {
 				@include organizedMultipleColumns(50% 50%);
-				margin: 20px 36px;
 			}
 		}
 	}
