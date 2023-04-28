@@ -1,23 +1,17 @@
-import {
-	Link,
-	useLocation,
-	useNavigate,
-	useParams,
-} from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { ProductDetailCard } from '../../components';
-import './ProductDetails.scss';
-import { initializedProductSelected } from '../../const/detailsData.const';
-import { useEffect, useState } from 'react';
 import { Breadcrumbs } from '../../../../shared/ui/components/BreadCrumb/Breadcrumbs';
+import { initializedProductSelected } from '../../const/detailsData.const';
+import { useGetProductsByIdQuery } from '../../../../store/apis';
+import { useEffect } from 'react';
+import './ProductDetails.scss';
 
 export const ProductDetails = () => {
 	const { productId } = useParams();
 	const navigate = useNavigate();
 	const queryString = new URLSearchParams(useLocation().search);
-    const filter = queryString.get('filter');
-	const [productSelected, setProductSelected] = useState({
-		...initializedProductSelected,
-	});
+	const filter = queryString.get('filter');
+	const { data: dataProductSelected = initializedProductSelected, isLoading }= useGetProductsByIdQuery(productId);
 
 	const routes = [
 		{
@@ -26,20 +20,13 @@ export const ProductDetails = () => {
 		},
 		{
 			path: '/products/details/:productId',
-			breadcrumb: `${productSelected.model}`,
+			breadcrumb: `${dataProductSelected.model}`,
 		},
 	];
 
 	useEffect(() => {
-		fetch(`https://itx-frontend-test.onrender.com/api/product/${productId}`)
-			.then(response => response.json())
-			.then(json => setProductSelected({ ...json, ...{ productSelected } }))
-			.catch(error => console.error(error));
-	}, []);
-
-	useEffect(() => {
-		navigate(`?filter=${filter}&model=${productSelected.model}`);
-	}, [productSelected]);
+		navigate(`?filter=${filter}&model=${dataProductSelected.model}`);
+	}, [dataProductSelected]);
 
 	return (
 		<div className='section-container'>
@@ -48,10 +35,13 @@ export const ProductDetails = () => {
 					<span>Volver</span>
 				</Link>
 				<div className='breadcrumb'>
-					<Breadcrumbs routes={routes}/>
+					<Breadcrumbs routes={routes} />
 				</div>
 			</div>
-			<ProductDetailCard productSelected={productSelected} />
+			{ isLoading && (<div>
+				<span>Cargando información ...</span>
+			</div>)}
+			<ProductDetailCard productSelected={dataProductSelected} />
 		</div>
 	);
 };

@@ -40,7 +40,12 @@ export const ProductCard = ({ brand, imgUrl, model, price }) => {
 	);
 };
 
-ProductCard.defaultProps = {};
+ProductCard.defaultProps = {
+	brand: '',
+	imgUrl: '',
+	model: '',
+	price: '',
+};
 
 ProductCard.propTypes = {
 	productId: PropTypes.string,
