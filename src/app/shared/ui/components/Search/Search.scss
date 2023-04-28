@@ -1,0 +1,42 @@
+@import '../../../../../assets/scss';
+
+.filter-container {
+	width: 100%;
+	border: 1px solid $purple-500;
+	border-radius: 8px;
+	padding: 2px;
+	background-color: $white;
+
+	input,
+	button {
+		border: none;
+		padding: 5px;
+		background-color: $white;
+		outline: none;
+	}
+
+	&__form {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__input {
+		padding: 8px;
+	}
+	.btn {
+		cursor: pointer;
+		padding-left: 12px;
+		&__icon--search {
+			color: $white;
+			font-size: 24px;
+		}
+		.c-gray-200 {
+			color: $gray-200;
+		}
+	}
+}
+
+@media screen and (min-width: $break-tablet) {
+	.filter-container {
+		width: 40%;
+	}
+}

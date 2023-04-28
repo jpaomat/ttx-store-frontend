@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { LogoTtx } from '../../icons/LogoTtx';
-import { ShoppingCart } from '../../../../components/ShoppingCart/ShoppingCart';
+import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
 import './Navbar.scss';
 
 export const Navbar = () => {

@@ -21,7 +21,8 @@ module.exports = {
 		quotes: ['error', 'single'],
 		'quote-props': ['error', 'as-needed'],
 		'no-multiple-empty-lines': 'error',
-		'max-len': ['error', {code: 140}]
+		'max-len': ['error', {code: 140}],
+		'import/export': 0
 	},
 	settings: {
 		react: {
