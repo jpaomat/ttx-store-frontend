@@ -7,11 +7,15 @@ export const useInputSearch = ({ parametersToSearch = [], initialDataList = [] }
     const navigate = useNavigate();
     const queryString = new URLSearchParams(useLocation().search);
     const filter = queryString.get('filter');
-    const [inputTextState, setInputState] = useState(filter || '');
+    const [inputTextState, setInputState] = useState( (filter && filter !== 'null') ? filter : '');
     const [dataListState, setDataListState] = useState(initialDataList);
 
     useEffect(() => {
         setDataListState(initialDataList);
+        if (inputTextState) {
+            const filterDataList = filterData(filter, parametersToSearch, initialDataList);
+            setDataListState(filterDataList);
+        }
     }, [initialDataList]);
 
     const onInputChange = ({ target }) => {

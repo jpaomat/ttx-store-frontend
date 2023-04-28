@@ -1,0 +1,37 @@
+@import '../../../../../assets/scss/';
+
+.navigate__navbar {
+	display: flex;
+	.link__back {
+		span {
+			padding: 0 5px;
+			border-right: 2px solid $purple-500;
+			color: $purple-500;
+		}
+	}
+	a {
+		padding: 4px;
+		text-decoration: none;
+	}
+}
+
+@media screen and (min-width: $break-tablet) {
+	.navigate__navbar {
+		padding: 18px 12px 12px;
+		color: black;
+		.link__back {
+			span {
+				font-weight: 400;
+			}
+		}
+		a {
+			text-decoration: none;
+			padding: 4px;
+			color: black;
+			cursor: pointer;
+			&:hover {
+				color: $purple-500;
+			}
+		}
+	}
+}

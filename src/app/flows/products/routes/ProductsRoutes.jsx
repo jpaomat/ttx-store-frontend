@@ -8,8 +8,8 @@ export const ProductsRoutes = () => {
 			<Navbar />
 			<Routes>
 				<Route path='products' element={<ProductList />} />
-				<Route path='details/:productId' element={<ProductDetails />} />
-				<Route path='/' element={<Navigate to='/products' />} />
+				<Route path='/products/details/:productId' element={<ProductDetails />} />
+				<Route path='/*' element={<Navigate to='/products' />} />
 				<Route />
 			</Routes>
 		</>

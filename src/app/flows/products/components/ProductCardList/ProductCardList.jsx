@@ -1,17 +1,17 @@
-// import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ProductCard } from '../ProductCard/ProductCard';
 import './ProductCardList.scss';
 
-export const ProductCardList = ({products}) => {
+export const ProductCardList = ({ products }) => {
+	const location = useLocation();
 
 	return (
 		<div className='card-list'>
 			{products &&
 				products.map((productSelected, i) => (
 					<div key={`card-list-${i}`}>
-						<Link to={`/details/${productSelected.id}`}>
+						<Link to={`details/${productSelected.id}${location.search}`}>
 							<ProductCard {...productSelected} />
 						</Link>
 					</div>
@@ -21,9 +21,9 @@ export const ProductCardList = ({products}) => {
 };
 
 ProductCardList.defaultProps = {
-	products : [{}]
+	products: [{}],
 };
 
 ProductCardList.propTypes = {
-	products: PropTypes.arrayOf(PropTypes.shape({}))
+	products: PropTypes.arrayOf(PropTypes.shape({})),
 };

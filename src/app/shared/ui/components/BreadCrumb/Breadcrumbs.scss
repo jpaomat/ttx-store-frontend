@@ -1,0 +1,21 @@
+.breadcrumbs,
+.bc,
+.content {
+	display: flex;
+}
+
+.bc {
+	align-items: center;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.bc span {
+	display: flex;
+	align-items: center;
+}
+
+.breadcrumbs {
+	display: flex;
+	align-items: center;
+}

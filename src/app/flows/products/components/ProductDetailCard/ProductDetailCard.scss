@@ -67,7 +67,7 @@
 @media screen and (min-width: $break-desktop) {
 	.detail-card {
 		@include organizedMultipleColumns(45% 55%);
-		margin: 32px 48px;
+		margin: 18px 48px;
 	}
 	.item-information {
 		border-radius: 10px;

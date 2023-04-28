@@ -1,22 +1,15 @@
 import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { BsCart4 } from 'react-icons/bs';
+import PropTypes from 'prop-types';
 import { ButtonApp, MultiselectContainer } from '../../../../shared/ui';
-import { dataToShowDescription, selectorsProduct, initializedProductSelected } from '../../const/detailsData.const';
+import { dataToShowDescription, initializedProductSelected, selectorsProduct } from '../../const/detailsData.const';
 import './ProductDetailCard.scss';
 
-export const ProductDetailCard = () => {
+export const ProductDetailCard = ({productSelected = initializedProductSelected}) => {
 	const { productId } = useParams();
-	const [productSelected, setProductSelected] = useState({...initializedProductSelected});
 	const [selectedProductOptions, setSelectedProductOptions] = useState(null);
 	const [selectorDefaultValues, setSelectorDefaultValues] = useState(null);
-
-	useEffect(() => {
-		fetch(`https://itx-frontend-test.onrender.com/api/product/${productId}`)
-			.then(response => response.json())
-			.then(json => setProductSelected({ ...json, ...{ productSelected } }))
-			.catch(error => console.error(error));
-	}, []);
 
 	const getOptions = (codeName, options) => {
 		return options.map(({ code, name }) => ({ codeName, code, name }));
@@ -118,4 +111,12 @@ export const ProductDetailCard = () => {
 			</div>
 		)
 	);
+};
+
+ProductDetailCard.defaultProps = {
+	productSelected: {}
+};
+
+ProductDetailCard.propTypes = {
+	productSelected: PropTypes.shape({})
 };
