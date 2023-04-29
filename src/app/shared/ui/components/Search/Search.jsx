@@ -7,7 +7,7 @@ import './Search.scss';
 export const Search = ({
 	parametersToSearch,
 	initialDataList,
-	setFilteredProductList,
+	getFilteredDataList,
 	placeholder
 }) => {
 
@@ -17,7 +17,7 @@ export const Search = ({
 	});
 
 	useEffect(() => {
-		setFilteredProductList(dataListState);
+		getFilteredDataList(dataListState);
 	}, [dataListState]);
 
 	const onCleanFilterSubmit = (event) => {
@@ -55,6 +55,6 @@ Search.defaultProps = {
 Search.propTypes = {
 	parametersToSearch: PropTypes.arrayOf(PropTypes.string).isRequired,
 	initialDataList:  PropTypes.arrayOf(PropTypes.shape({})).isRequired,
-	setFilteredProductList: PropTypes.func,
+	getFilteredDataList: PropTypes.func,
 	placeholder: PropTypes.string,
 };

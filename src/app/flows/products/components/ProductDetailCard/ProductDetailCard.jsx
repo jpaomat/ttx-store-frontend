@@ -1,15 +1,25 @@
+import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { BsCart4 } from 'react-icons/bs';
 import PropTypes from 'prop-types';
 import { ButtonApp, MultiselectContainer } from '../../../../shared/ui';
-import { dataToShowDescription, initializedProductSelected, selectorsProduct } from '../../const/detailsData.const';
+import {
+	dataToShowDescription,
+	initializedProductSelected,
+	selectorsProduct,
+} from '../../const/detailsData.const';
+import { incrementCartCounter } from '../../../../store/slices/cartCounter/cartCounterSlice';
 import './ProductDetailCard.scss';
+import { productsApi } from '../../../../../api/products';
 
-export const ProductDetailCard = ({productSelected = initializedProductSelected}) => {
+export const ProductDetailCard = ({
+	productSelected = initializedProductSelected,
+}) => {
 	const { productId } = useParams();
 	const [selectedProductOptions, setSelectedProductOptions] = useState(null);
 	const [selectorDefaultValues, setSelectorDefaultValues] = useState(null);
+	const dispatch = useDispatch();
 
 	const getOptions = (codeName, options) => {
 		return options.map(({ code, name }) => ({ codeName, code, name }));
@@ -26,16 +36,10 @@ export const ProductDetailCard = ({productSelected = initializedProductSelected}
 
 	const addItemCart = () => {
 		let dataToSend = selectedProductOptions || selectorDefaultValues;
-		dataToSend = {...dataToSend, id: productId};
-		fetch('https://itx-frontend-test.onrender.com/api/cart', {
-			method: 'POST',
-			headers: {
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(dataToSend),
-		})
-			.then(response => response.json())
-			.then(json => console.log('Products in cart', json))
+		dataToSend = { ...dataToSend, id: productId };
+		productsApi
+			.post('cart', {...dataToSend})
+			.then(({ data }) => dispatch(incrementCartCounter({ ...data, product: dataToSend })))
 			.catch(error => console.error(error));
 	};
 
@@ -71,7 +75,7 @@ export const ProductDetailCard = ({productSelected = initializedProductSelected}
 							Caracteristicas destacadas
 						</p>
 						<ul className='item-information__body--options'>
-							{dataToShowDescription.map(({label, property}) => (
+							{dataToShowDescription.map(({ label, property }) => (
 								<li key={property}>
 									<span>
 										<b>{label}: </b> {productSelected[property]}
@@ -114,9 +118,9 @@ export const ProductDetailCard = ({productSelected = initializedProductSelected}
 };
 
 ProductDetailCard.defaultProps = {
-	productSelected: {}
+	productSelected: {},
 };
 
 ProductDetailCard.propTypes = {
-	productSelected: PropTypes.shape({})
+	productSelected: PropTypes.shape({}),
 };

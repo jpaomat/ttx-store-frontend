@@ -12,7 +12,7 @@ export const useInputSearch = ({ parametersToSearch = [], initialDataList = [] }
 
     useEffect(() => {
         setDataListState(initialDataList);
-        if (inputTextState) {
+        if (inputTextState && initialDataList.length > 0) {
             const filterDataList = filterData(filter, parametersToSearch, initialDataList);
             setDataListState(filterDataList);
         }

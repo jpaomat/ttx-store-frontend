@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import { LogoTtx } from '../../icons/LogoTtx';
 import { ShoppingCart } from '../ShoppingCart/ShoppingCart';
 import './Navbar.scss';
 
-export const Navbar = () => {
+export const Navbar = ({itemsCart}) => {
 	return (
 		<nav className='navbar'>
 			<Link className='navbar-brand' to='/'>
@@ -16,7 +17,7 @@ export const Navbar = () => {
 					<li className='navbar-nav-actions__cart'>
 						<div className='navbar-nav-actions__cart-content'>
 							<a className='navbar-nav-actions__shopingCart'>
-								<ShoppingCart items={20} />
+								<ShoppingCart items={itemsCart} />
 							</a>
 						</div>
 					</li>
