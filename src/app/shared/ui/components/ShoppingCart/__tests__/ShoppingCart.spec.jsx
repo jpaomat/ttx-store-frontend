@@ -1,11 +1,14 @@
-import Renderer from 'react-test-renderer/shallow';
+import { render, screen } from '@testing-library/react';
 import { ShoppingCart } from '../ShoppingCart';
 
-const renderer = new Renderer();
-
-describe('Techtronix component', () => {
+describe('<ShoppingCart> component', () => {
 	it('should render component', () => {
-		const component = renderer.render(<ShoppingCart items={5} />);
-		expect(component).toMatchSnapshot();
+		const {container} = render(<ShoppingCart items={5} />);
+		expect(container).toMatchSnapshot();
+	});
+
+	it('should render component and validate text', () => {
+		render(<ShoppingCart items={10} />);
+		expect(screen.getByText(10)).toBeTruthy();
 	});
 });

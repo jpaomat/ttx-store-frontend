@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ButtonApp /> component should render component 1`] = `
+<div>
+  <div
+    class="btn btn-container"
+  >
+    <button
+      class="btn-ttx btn-ttx__sm"
+    >
+      <span>
+        Continuar
+      </span>
+    </button>
+  </div>
+</div>
+`;

@@ -1,15 +1,4 @@
-const removeAccents = (str) => {
-    return str
-        .replace(/á/g, 'a')
-        .replace(/é/g, 'e')
-        .replace(/í/g, 'i')
-        .replace(/ó/g, 'o')
-        .replace(/ú/g, 'u');
-};
-
-const cleanText = (text) => {
-    return removeAccents(text.toLocaleLowerCase());
-};
+const { cleanText } = require('./textMethods');
 
 const filterData = (filterText = '', parametersToFilter = [], dataList = []) => {
     filterText = cleanText(filterText).trim();
@@ -22,5 +11,5 @@ const filterData = (filterText = '', parametersToFilter = [], dataList = []) => 
 };
 
 module.exports = {
-    filterData
+    filterData,
 };

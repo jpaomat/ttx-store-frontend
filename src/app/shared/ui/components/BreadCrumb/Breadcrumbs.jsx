@@ -9,7 +9,7 @@ export const Breadcrumbs = ({ routes }) => {
 	return (
 		<div className='breadcrumbs'>
 			{breadcrumbs.map(({ breadcrumb, match }, index) => (
-				<div className='bc' key={match.pathname}>
+				<div className='bc breadcrumbs__item' key={match.pathname}>
 					<Link className={index} to={match.pathname || ''}>
 						{breadcrumb}
 					</Link>

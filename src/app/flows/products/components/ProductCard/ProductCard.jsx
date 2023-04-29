@@ -4,15 +4,15 @@ import { BsCart4 } from 'react-icons/bs';
 import './ProductCard.scss';
 
 export const ProductCard = ({ brand, imgUrl, model, price }) => {
+	const notAvilableText = 'No disponible';
 	const onClick = () => {
-		console.log('click desde button');
 	};
 
 	const PriceComponent = ({ price }) =>
 		price ? (
 			<p className='card__content--price'>{price} €</p>
 		) : (
-			<p className='item__no-stock '>No disponible</p>
+			<p className='item__no-stock '>{notAvilableText}</p>
 		);
 
 	const ButtonContent = ({ price }) =>
@@ -22,7 +22,7 @@ export const ProductCard = ({ brand, imgUrl, model, price }) => {
 				<BsCart4 className='cart-icon' size={14} />
 			</>
 		) : (
-			<span>No disponible</span>
+			<span>{notAvilableText}</span>
 		);
 
 	return (
@@ -48,7 +48,6 @@ ProductCard.defaultProps = {
 };
 
 ProductCard.propTypes = {
-	productId: PropTypes.string,
 	brand: PropTypes.string.isRequired,
 	imgUrl: PropTypes.string.isRequired,
 	model: PropTypes.string.isRequired,

@@ -4,18 +4,17 @@
 	display: flex;
 }
 
-.bc {
-	align-items: center;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-.bc span {
+.breadcrumbs {
 	display: flex;
 	align-items: center;
+	&__item {
+		align-items: center;
+		white-space: nowrap;
+		overflow: hidden;
+	}
 }
 
-.breadcrumbs {
+.breadcrumbs span {
 	display: flex;
 	align-items: center;
 }
