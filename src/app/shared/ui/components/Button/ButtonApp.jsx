@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import './ButtonApp.scss';
 
 export const ButtonApp = ({children, size, disabledBtn, onClick}) => {
+
     return (
         <div className='btn btn-container'>
             <button className={`btn-ttx btn-ttx__${size}`} disabled={disabledBtn} onClick={onClick}>
@@ -16,7 +17,7 @@ ButtonApp.defaultProps = {
 };
 
 ButtonApp.propTypes = {
-    children: PropTypes.element,
+    children: PropTypes.element.isRequired,
 	disabledBtn: PropTypes.bool.isRequired,
     size: PropTypes.string.isRequired,
 	onClick: PropTypes.func

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Search } from '../../../../shared/ui';
+import { Search } from '../../../../shared/ui/components';
 import { ProductCardList } from '../../components';
 import { setfilterProductsList } from '../../../../store/slices/products';
 import { useGetProductsQuery } from '../../../../store/apis';

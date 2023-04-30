@@ -3,7 +3,7 @@ import { TechtronixApp } from './TechtronixApp';
 
 const renderer = new Renderer();
 
-describe('Techtronix component', () => {
+describe('Techtronix App component', () => {
 	it('should render component', () => {
 		const component = renderer.render(<TechtronixApp />);
 		expect(component).toMatchSnapshot();

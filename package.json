@@ -23,6 +23,7 @@
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "jest --coverage --no-watchman",
+		"test:dev": "jest --coverage --watchAll",
 		"eject": "react-scripts eject",
 		"prepare": "husky install",
 		"lint": "eslint ./src --ext .js,.jsx",

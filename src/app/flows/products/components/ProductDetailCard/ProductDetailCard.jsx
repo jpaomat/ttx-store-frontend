@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { BsCart4 } from 'react-icons/bs';
 import PropTypes from 'prop-types';
-import { ButtonApp, MultiselectContainer } from '../../../../shared/ui';
+import { ButtonApp, MultiselectContainer } from '../../../../shared/ui/components';
 import {
 	dataToShowDescription,
 	initializedProductSelected,
