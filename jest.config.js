@@ -1,7 +1,8 @@
 module.exports = {
 	testEnvironment: 'jest-environment-jsdom',
 	moduleNameMapper: { // npm i --save-dev babel-jest
-		'^.+\\.(css|less|scss)$': 'babel-jest'
+		'^.+\\.(css|less|scss)$': 'babel-jest',
+		axios: 'axios/dist/node/axios.cjs'
 	},
 	projects: [
 		/**
@@ -18,7 +19,8 @@ module.exports = {
 				'<rootDir>/app/context/TracksContext',
 			],
 			moduleNameMapper: {
-				'^.+\\.(css|less|scss)$': 'babel-jest'
+				'^.+\\.(css|less|scss)$': 'babel-jest',
+				axios: 'axios/dist/node/axios.cjs'
 			},
 			verbose: true,
 		}

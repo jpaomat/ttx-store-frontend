@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 const { ProductCard } = require('../ProductCard');
 const { defaultMock } = require('./mocks');
 
@@ -23,6 +23,12 @@ describe('<Techtronix /> component', () => {
 		const {container} = render(<ProductCard {...defaultMock}/>);
 		const brandElement = container.querySelector('.card__content--model');
 		expect(brandElement.innerHTML).toContain(defaultMock.model);
+	});
+
+	it('should execute the onClick event', () => {
+		const buttonText = 'Agregar al carrito';
+		render(<ProductCard {...defaultMock}/>);
+		fireEvent.click(screen.getByText(buttonText));
 	});
 
 	it('should show the text No disponible when the price is no send', () => {

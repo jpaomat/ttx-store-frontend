@@ -1,0 +1,319 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProductDetailCard /> component Renderer componen 1`] = `
+<div>
+  <div
+    class="detail-card"
+  >
+    <div
+      class="detail-card__item detail-card__item--image"
+    >
+      <img
+        alt=""
+        src="http:image-hp-test.com"
+      />
+    </div>
+    <div
+      class="detail-card__item item-information"
+    >
+      <div
+        class="item-information__header"
+      >
+        <p
+          class="item-information__header--title"
+        >
+          Hp/test model/undefined
+        </p>
+        <div
+          class="item-price"
+        >
+          <span
+            class="item-information__header--price"
+          >
+            110
+          </span>
+          <span
+            class="item-information__header--currrency"
+          >
+            €
+          </span>
+        </div>
+      </div>
+      <div
+        class="item-information__body"
+      >
+        <p
+          class="item-information__body--title"
+        >
+          Caracteristicas destacadas
+        </p>
+        <ul
+          class="item-information__body--options"
+        >
+          <li>
+            <span>
+              <b>
+                Marca
+                : 
+              </b>
+               
+              Hp
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                Modelo
+                : 
+              </b>
+               
+              test model
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                Precio
+                : 
+              </b>
+               
+              110
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                CPU
+                : 
+              </b>
+               
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                RAM
+                : 
+              </b>
+               
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                Sistema Operativo
+                : 
+              </b>
+               
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                Resolucion de pantalla
+                : 
+              </b>
+               
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                Bateria
+                : 
+              </b>
+               
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                Primera camara
+                : 
+              </b>
+               
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                Segunda camara
+                : 
+              </b>
+               
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                Dimensiones
+                : 
+              </b>
+               
+            </span>
+          </li>
+          <li>
+            <span>
+              <b>
+                Peso
+                : 
+              </b>
+               
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div
+        class="item-information__footer"
+      >
+        <div
+          class="item-information__footer--actions"
+        >
+          <div
+            class="select-actions"
+          >
+            <label
+              class="select-actions__label"
+            >
+              Almacenamiento
+            </label>
+            <div>
+              <div
+                class="multiselect-container multiSelectContainer  select-actions__select"
+                id="multiselectContainerReact"
+              >
+                <div
+                  class="search-wrapper searchWrapper singleSelect"
+                >
+                  <span
+                    class="chip  singleChip false"
+                  >
+                    16 GB
+                    <img
+                      class="icon_cancel closeIcon"
+                      src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2096%2096%22%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%20%20%20%3Cstyle%20type%3D%22text%2Fcss%22%3E%20%20%20%20%20%20%20%20.st0%7B%20%20%20%20%20%20%20%20%20%20%20%20fill%3A%23fff%3B%20%20%20%20%20%20%20%20%7D%20%3C%2Fstyle%3E%20%20%20%20%3Cg%3E%20%20%20%20%20%20%20%20%3Cpath%20class%3D%22st0%22%20d%3D%22M48%2C0A48%2C48%2C0%2C1%2C0%2C96%2C48%2C48.0512%2C48.0512%2C0%2C0%2C0%2C48%2C0Zm0%2C84A36%2C36%2C0%2C1%2C1%2C84%2C48%2C36.0393%2C36.0393%2C0%2C0%2C1%2C48%2C84Z%22%2F%3E%20%20%20%20%20%20%20%20%3Cpath%20class%3D%22st0%22%20d%3D%22M64.2422%2C31.7578a5.9979%2C5.9979%2C0%2C0%2C0-8.4844%2C0L48%2C39.5156l-7.7578-7.7578a5.9994%2C5.9994%2C0%2C0%2C0-8.4844%2C8.4844L39.5156%2C48l-7.7578%2C7.7578a5.9994%2C5.9994%2C0%2C1%2C0%2C8.4844%2C8.4844L48%2C56.4844l7.7578%2C7.7578a5.9994%2C5.9994%2C0%2C0%2C0%2C8.4844-8.4844L56.4844%2C48l7.7578-7.7578A5.9979%2C5.9979%2C0%2C0%2C0%2C64.2422%2C31.7578Z%22%2F%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E"
+                    />
+                  </span>
+                  <input
+                    autocomplete="off"
+                    class="searchBox display-none"
+                    disabled=""
+                    id="search_input"
+                    name="search_name_input"
+                    placeholder=""
+                    type="text"
+                    value=""
+                  />
+                  <img
+                    class="icon_cancel icon_down_dir"
+                    src="data:image/svg+xml,%3Csvg%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%20width%3D%2232%22%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%20%20%20%3Cg%20id%3D%22background%22%3E%20%20%20%20%20%20%20%20%3Crect%20fill%3D%22none%22%20height%3D%2232%22%20width%3D%2232%22%2F%3E%20%20%20%20%3C%2Fg%3E%20%20%20%20%3Cg%20id%3D%22arrow_x5F_down%22%3E%20%20%20%20%20%20%20%20%3Cpolygon%20points%3D%222.002%2C10%2016.001%2C24%2030.002%2C10%20%20%22%2F%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E"
+                  />
+                </div>
+                <div
+                  class="optionListContainer displayNone"
+                >
+                  <ul
+                    class="optionContainer"
+                  >
+                    <li
+                      class="option selected highlightOption highlight  "
+                    >
+                      16 GB
+                    </li>
+                    <li
+                      class="option    "
+                    >
+                      32 GB
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="select-actions"
+          >
+            <label
+              class="select-actions__label"
+            >
+              Colores
+            </label>
+            <div>
+              <div
+                class="multiselect-container multiSelectContainer  select-actions__select"
+                id="multiselectContainerReact"
+              >
+                <div
+                  class="search-wrapper searchWrapper singleSelect"
+                >
+                  <span
+                    class="chip  singleChip false"
+                  >
+                    Black
+                    <img
+                      class="icon_cancel closeIcon"
+                      src="data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%2096%2096%22%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%20%20%20%3Cstyle%20type%3D%22text%2Fcss%22%3E%20%20%20%20%20%20%20%20.st0%7B%20%20%20%20%20%20%20%20%20%20%20%20fill%3A%23fff%3B%20%20%20%20%20%20%20%20%7D%20%3C%2Fstyle%3E%20%20%20%20%3Cg%3E%20%20%20%20%20%20%20%20%3Cpath%20class%3D%22st0%22%20d%3D%22M48%2C0A48%2C48%2C0%2C1%2C0%2C96%2C48%2C48.0512%2C48.0512%2C0%2C0%2C0%2C48%2C0Zm0%2C84A36%2C36%2C0%2C1%2C1%2C84%2C48%2C36.0393%2C36.0393%2C0%2C0%2C1%2C48%2C84Z%22%2F%3E%20%20%20%20%20%20%20%20%3Cpath%20class%3D%22st0%22%20d%3D%22M64.2422%2C31.7578a5.9979%2C5.9979%2C0%2C0%2C0-8.4844%2C0L48%2C39.5156l-7.7578-7.7578a5.9994%2C5.9994%2C0%2C0%2C0-8.4844%2C8.4844L39.5156%2C48l-7.7578%2C7.7578a5.9994%2C5.9994%2C0%2C1%2C0%2C8.4844%2C8.4844L48%2C56.4844l7.7578%2C7.7578a5.9994%2C5.9994%2C0%2C0%2C0%2C8.4844-8.4844L56.4844%2C48l7.7578-7.7578A5.9979%2C5.9979%2C0%2C0%2C0%2C64.2422%2C31.7578Z%22%2F%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E"
+                    />
+                  </span>
+                  <input
+                    autocomplete="off"
+                    class="searchBox display-none"
+                    disabled=""
+                    id="search_input"
+                    name="search_name_input"
+                    placeholder=""
+                    type="text"
+                    value=""
+                  />
+                  <img
+                    class="icon_cancel icon_down_dir"
+                    src="data:image/svg+xml,%3Csvg%20height%3D%2232%22%20viewBox%3D%220%200%2032%2032%22%20width%3D%2232%22%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%20%20%20%20%3Cg%20id%3D%22background%22%3E%20%20%20%20%20%20%20%20%3Crect%20fill%3D%22none%22%20height%3D%2232%22%20width%3D%2232%22%2F%3E%20%20%20%20%3C%2Fg%3E%20%20%20%20%3Cg%20id%3D%22arrow_x5F_down%22%3E%20%20%20%20%20%20%20%20%3Cpolygon%20points%3D%222.002%2C10%2016.001%2C24%2030.002%2C10%20%20%22%2F%3E%20%20%20%20%3C%2Fg%3E%3C%2Fsvg%3E"
+                  />
+                </div>
+                <div
+                  class="optionListContainer displayNone"
+                >
+                  <ul
+                    class="optionContainer"
+                  >
+                    <li
+                      class="option selected highlightOption highlight  "
+                    >
+                      Black
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="btn btn-container"
+        >
+          <button
+            class="btn-ttx btn-ttx__sm"
+          >
+            <span>
+              Agregar al carrito
+            </span>
+            <svg
+              class="cart-icon"
+              fill="currentColor"
+              height="14"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

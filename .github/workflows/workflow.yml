@@ -65,7 +65,7 @@ jobs:
           restore-keys: npm-${{ env.cache-name }}
       - name: Running Test
         run: |
-          npm run test
+          npm run test -- -u
       - name: Persist Data
         uses: actions/upload-artifact@v2
         with:

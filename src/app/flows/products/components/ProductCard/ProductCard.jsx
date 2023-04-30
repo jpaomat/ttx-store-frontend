@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { ButtonApp } from '../../../../shared/ui';
+import { ButtonApp } from '../../../../shared/ui/components';
 import { BsCart4 } from 'react-icons/bs';
 import './ProductCard.scss';
 
