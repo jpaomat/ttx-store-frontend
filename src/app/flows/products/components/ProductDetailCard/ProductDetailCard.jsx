@@ -43,10 +43,6 @@ export const ProductDetailCard = ({
 			.catch(error => console.error(error));
 	};
 
-	// if (!productSelected) {
-	// 	return <Navigate to='/products' />;
-	// }
-
 	const { brand, imgUrl, model, ram, price, options } = productSelected;
 
 	return (

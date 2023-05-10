@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Search } from '../../../../shared/ui/components';
 import { ProductCardList } from '../../components';
@@ -10,11 +9,6 @@ export const ProductList = () => {
 	const dispatch = useDispatch();
 	const {data: productsList, isLoading} = useGetProductsQuery();
 	const { filteredProducts } = useSelector(state => state.productsList);
-	// const { products, filteredProducts, isLoadingData } = useSelector(state => state.productsList);
-
-	useEffect(() => {
-		// dispatch(getProductList());
-	}, []);
 
 	const getFilteredDataList = (filteredData) => {
 		dispatch(setfilterProductsList(filteredData));

@@ -6,7 +6,6 @@ jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => jest.fn(),
     useLocation: () => ({search: { filter: 'alc' }}),
-    // useSearchParams: () => [new URLSearchParams({ filter: 'alc' })],
 }));
 
 describe('UserInputSearch custom-hook', () => {
