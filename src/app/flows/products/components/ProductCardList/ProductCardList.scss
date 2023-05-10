@@ -6,14 +6,12 @@
 	}
 }
 
-// Table
 @media screen and (min-width: $break-tablet) {
 	.card-list {
 		@include organizedMultipleColumns(repeat(2, 1fr));
 	}
 }
 
-// Desktop
 @media screen and (min-width: $break-desktop) {
 	.card-list {
 		@include organizedMultipleColumns(repeat(4, 1fr));
